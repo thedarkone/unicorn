@@ -63,7 +63,7 @@ module Unicorn
           use Rack::Lint
           run inner_app
         end.to_app
-      when "deployment"
+      when "deployment", "production"
         Rack::Builder.new do
           use Rack::ContentLength
           use Rack::Chunked
